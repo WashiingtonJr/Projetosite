@@ -1,0 +1,19 @@
+/* Animação de texto digitado */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.typing-animation {
+    overflow: hidden; /* Esconde o texto que ultrapassa o container */
+    border-right: .10em solid orange; /* Cores e largura do cursor */
+    white-space: nowrap; /* Impede a quebra de linha */
+    animation: 
+        typing 6s steps(30, end) 1s 1 normal both,
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
